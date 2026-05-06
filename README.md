@@ -17,7 +17,7 @@ Performed full port and service enumeration. Discovered FTP with anonymous acces
 
 ## 2. FTP Enumeration
 
-![FTP Download](images/02-ftp-anonymous-download.png)
+![FTP Download](ftp-anonymous-download.png)
 
 ```bash
 wget -r --no-passive ftp://10.129.29.21/
@@ -30,7 +30,7 @@ Anonymous login allowed full access to files. Downloaded everything instead of b
 
 ## 3. ZIP Hash Extraction
 
-![ZIP to Hash](images/03-zip2john-hash.png)
+![ZIP to Hash](john-hash.png)
 
 ```bash
 zip2john "Access Control.zip" > Access_Control.hash
@@ -118,7 +118,7 @@ Enumerated stored Windows credentials and found cached Administrator access, ind
 
 ## 9. Privilege Escalation
 
-![Privilege Escalation](images/09-runas-priv-esc.png)
+![Privilege Escalation](runas-priv-esc.png)
 
 ```cmd
 runas /savecred /user:ACCESS\Administrator "cmd.exe /c type C:\Users\Administrator\Desktop\root.txt > C:\Users\security\Desktop\root.txt"
