@@ -105,7 +105,7 @@ Used discovered credentials to gain a shell as the `security` user via Telnet.
 
 ## 8. Check Saved Credentials
 
-![Saved Credentials](pst-read-credentials.png)
+![Saved Credentials](telnet-login.png)
 
 ```cmd
 cmdkey /list
