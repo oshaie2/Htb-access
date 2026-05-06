@@ -56,7 +56,7 @@ Extracted strings from the database backup to build a custom wordlist. This is m
 
 ## 5. Crack ZIP Password
 
-![John Crack](john-crack-success.png)
+![John Crack](john-crack-sucess.png)
 
 ```bash
 john Access_Control.hash --wordlist=backup_wordlist
